@@ -1,5 +1,7 @@
 package com.jsp.array_searching_algorithms;
 
+
+//linear search
 public class SearchElement {
 	public static void searchElement(int a[],int key) {
 		for(int i=0;i<a.length;i++) {
