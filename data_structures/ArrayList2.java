@@ -10,6 +10,24 @@ public class ArrayList2 {
 		nextElement=0;	
 	}
 	
+	//Constructor type 2
+//	public ArrayList2(int newData[]) {
+//	data=new int[newData.length];
+//	for(int i=0;i<newData.length;i++) {
+//		data[i]=newData[i];
+//		nextElement=0;
+//	}
+//}
+	
+	
+	//to add user-defined array size (Constructor type 3)
+//	public ArrayList2(int size) {
+//		data=new int[size];
+//		nextElement=0;	
+//	}
+	
+
+	
 	//override toString()
 	@Override
 	public String toString() {
@@ -35,12 +53,22 @@ public class ArrayList2 {
 		data[nextElement]=element;
 		nextElement++;
 	}
-
+	
+	
+	//to increment array capacity
 	final private void incrementCapacity() {
 		int temp[]=data;
 		data=new int[temp.length*(3/2)+1];
 		for(int i=0;i<temp.length;i++) {
 			data[i]=temp[i];
 		}
+	}
+	
+	//to remove an element
+	public int removeLast() {
+		int temp=data[nextElement-1];
+		data[nextElement-1]=0;
+		nextElement--;
+		return temp;
 	}
 }
