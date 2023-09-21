@@ -2,7 +2,7 @@ package com.jsp.logicalprogramming;
 
 public class Factorial
 {
-	public static int Factorial(int n)
+	public static int factorial(int n)
 	{
 		int fact=1;
 		for(int i=1;i<=n;i++) {
@@ -15,6 +15,6 @@ public class Factorial
 		return fact;
 	}
 	public static void main(String args[]) {
-		System.out.println(Factorial(5));
+		System.out.println(factorial(5));
 	}	
 }
